@@ -3,7 +3,6 @@
 var growButton = document.getElementById("growButton");
 var userHeight = document.getElementById("userHeight");
 var userCharacter = document.getElementById("userCharacter");
-var outputTree = "";
 
 // FUNCTIONS
 
@@ -31,7 +30,7 @@ function defineTree() {
 	let userInput = {};
 	userInput.height = document.getElementById("userHeight").value;
 	userInput.character = document.getElementById("userCharacter").value;
-	if (userInput.height === "" || userInput.character === "") { //checks if the user's entered a character
+	if (userInput.height === "" || userInput.character === "") {
 		alert("Please enter a value into both fields.");
 		return;
 	}
