@@ -32,9 +32,9 @@ function defineTree() {
 	userInput.character = document.getElementById("userCharacter").value;
 	if (userInput.height === "" || userInput.character === "") {
 		alert("Please enter a value into both fields.");
-		return;
-	}
+	} else {
 	growTree(userInput);
+	}
 };
 
 // EVENT LISTENERS
@@ -42,13 +42,13 @@ function defineTree() {
 growButton.addEventListener("click", defineTree);
 
 userHeight.addEventListener("keypress", function (e) {
-	if (13 === e.keyCode) {
+	if (e.keyCode === 13) {
 		defineTree();
 	}
 });
 
 userCharacter.addEventListener("keypress", function (e) {
-	if (13 === e.keyCode) {
+	if (e.keyCode === 13) {
 		defineTree();
 	}
 });
